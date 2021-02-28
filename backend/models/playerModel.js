@@ -17,4 +17,4 @@ export const PlayerSchema = new Schema({
     techniques:   {type: Number, enum: [1,2,3]},
     created_date: {type: Date, default: Date.now},
 
-})
+});
