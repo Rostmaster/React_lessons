@@ -7,8 +7,8 @@ import PlayerForm from './PlayerForm';
 
 class App extends Component{
 
-    constructor(){
-        super();
+    constructor (){
+        super ();
         this.state = {
             players: [],
             currentPlayer:{}
@@ -29,7 +29,7 @@ class App extends Component{
 
     updateCurrentPlayer = (item) =>{
         this.setState({
-            currentPlayer: item;
+            currentPlayer: item,
         })
     }
 
@@ -40,7 +40,9 @@ class App extends Component{
                     {/* row with 12 spaces */}
                     <nav>
                         <div className="nav-wrapper blue darken-1">
-                            <a href="/" className="brand-logo">Soccer Management</a>
+                            <a href="/" className="brand-logo">
+                                <b><h3>Soccer Club Management</h3></b>
+                            </a>
                         </div>
                     </nav>
                 </div>
@@ -53,15 +55,11 @@ class App extends Component{
                     </div>
                 </div>
                 <div className="col s9">
-                    <PlayerSingle
-                    player={this.state.currentPlayer}
-                    />
+                    <PlayerSingle player={this.state.currentPlayer}/>
                 </div>
                 <div className="row">
                     <div className="col s12">
-                        <PlayerForm
-                        player={this.state.currentPlayer}
-                        />
+                        <PlayerForm player={this.state.currentPlayer}/>
                     </div>
                 </div>
             </div>
