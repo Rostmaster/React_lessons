@@ -9,3 +9,5 @@ build
 .env.local
 
 npm-debug.log*
+
+Cred.js
