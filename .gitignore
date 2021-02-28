@@ -1,1 +1,11 @@
-node_modules
+node_modules 
+.pnp
+pnp.js
+
+coverage
+
+build
+
+.env.local
+
+npm-debug.log*

@@ -7,7 +7,7 @@ import { routes } from "./routes/soccerRoutes";
 
 const app = express();
 const PORT = 4000;
-const HOST = 'localhost';
+const HOST = '127.0.0.1';
 
 // Connect to mongoose
 mongoose.Promise = global.Promise;
@@ -21,7 +21,7 @@ catch(e){
 }
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
-app.use(cors);
+app.use(cors());
 routes(app);
 
 app.get("/", (req,res) => {
@@ -31,4 +31,4 @@ app.get("/", (req,res) => {
 app.listen(PORT, HOST, () => {
     console.log(`\n✔ The server is on port:  ${PORT}\n`);
 });
- 
+  
