@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios'
-export class PlayerForm extends Component{
+export class PlayerForm extends React.Component{
    
     constructor(props){
         super();
@@ -18,6 +18,8 @@ export class PlayerForm extends Component{
         })
         .then( (response) => console.log(response))
         .catch( (error)   => console.error(error));
+        window.location.reload(false);
+
     }
 
     deletePlayer = (event) => {
@@ -25,11 +27,21 @@ export class PlayerForm extends Component{
         axios.delete(`http://localhost:4000/player/${this.props.player._id}`,{})
         .then( (response) => console.log(response))
         .catch( (error)   => console.error(error));
-        window.location.reload(false);
     }
 
     updatePlayer = (event) => {
         event.preventDefault();
+        axios.put(`http://localhost:4000/player/${this.props.player._id}`,
+        {
+            firstName: this.refs.firstName.value,
+            lastName: this.refs.lastName.value,
+            phone: this.refs.phone.value,
+            email: this.refs.email.value,
+        })
+        .then( (response) => console.log(response))
+        .catch( (error)   => console.error(error));
+        window.location.reload(false);
+
     }
     
     render(){

@@ -5,8 +5,8 @@ const PlayerSingle = (props) =>{
         <div className="row">
             <div className="col s12">
                 <div className="card">
-                    <div className="card-image">
-                        <img src="../../public/sunset.jpg" alt="sunset.jpg"></img>
+                    <div className="card-image" width="50 vw">
+                        <img src="./fun.jpg" alt="sunset.jpg" width="50 vw"></img>
                         <span className="card-title">{props.player.firstName}{props.player.lastName}</span>
                     </div>
                     <div className="card-content">

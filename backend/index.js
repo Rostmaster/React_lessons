@@ -7,9 +7,10 @@ import { routes } from "./routes/soccerRoutes";
 
 const app = express();
 const PORT = 4000;
-const HOST = '127.0.0.1';
+const HOST = '127.0.0.1'; 
 
-// Connect to mongoose
+console.clear();
+// Connect to mongoose 
 mongoose.Promise = global.Promise;
 try{
     mongoose.connect(`mongodb+srv://${MyUser}:${MyPassword}@cluster0.vqvfn.mongodb.net/${MyDB}?retryWrites=true&w=majority`,{useNewUrlParser: true, useUnifiedTopology: true});
@@ -25,10 +26,12 @@ app.use(cors());
 routes(app);
 
 app.get("/", (req,res) => {
+   
     res.send(`\n✔ The server is on port:  ${PORT}\n`)
 });
 
 app.listen(PORT, HOST, () => {
+    
     console.log(`\n✔ The server is on port:  ${PORT}\n`);
 });
   

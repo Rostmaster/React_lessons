@@ -52,11 +52,12 @@ class App extends Component{
                             players = {this.state.players}
                             updateCurrentPlayer={this.updateCurrentPlayer}
                         />
-                    </div>
-                </div>
-                <div className="col s9">
+                    </div> 
+                   <div className="col s9">
                     <PlayerSingle player={this.state.currentPlayer}/>
                 </div>
+                </div>
+
                 <div className="row">
                     <div className="col s12">
                         <PlayerForm player={this.state.currentPlayer}/>
